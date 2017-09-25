@@ -1,0 +1,19 @@
+{
+  "name": "interview-studio-pro",
+  "version": "1.0.0",
+  "description": "Improve your interviewing skills through practice and review.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathandavidlewis/interview-studio-pro.git"
+  },
+  "author": "Jonathan David Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathandavidlewis/interview-studio-pro/issues"
+  },
+  "homepage": "https://github.com/jonathandavidlewis/interview-studio-pro#readme"
+}
