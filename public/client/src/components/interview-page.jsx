@@ -2,7 +2,9 @@ class InterviewPage extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      question: null
+      question: '',
+      response_text: '',
+      keywords: 'javascript'
     };
     this.loadQuestion = this.loadQuestion.bind(this);
     this.fetchQuestion = this.fetchQuestion.bind(this);
@@ -14,10 +16,12 @@ class InterviewPage extends React.Component {
     });
   }
 
-  fetchQuestion() {
+  fetchQuestion(event) {
     $.ajax({
-      url: app.server,
+      url: '/api/questions',
       type: 'GET',
+      data: {userToken: '', keywords: this.state.keywords, maxResults: 1, sort: 'random'},
+      dataType: 'application/json',
       success: function (data) {
         console.log('get data', data);
         this.loadQuestion(data);
@@ -29,7 +33,7 @@ class InterviewPage extends React.Component {
   }
 
   componentDidMount() {
-    this.getQuestion('javascript');
+    this.fetchQuestion('javascript');
   }
   render() {
     return (
@@ -61,7 +65,7 @@ class InterviewPage extends React.Component {
               <div className="row next-question-container">
                 <br />
                   <div className="col-lg-6"></div>
-                  <div className=" col-lg-6 btn btn-default next-question">
+                  <div className=" col-lg-6 btn btn-default next-question" onClick={this.fetchQuestion}>
                     <span className="next-question-label">Next question</span>
                   </div>
                   <div className="interim-response-text container-fluid">

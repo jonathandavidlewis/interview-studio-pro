@@ -3,7 +3,7 @@ class App extends React.Component {
     super(props);
     this.state= {
       question: null,
-      activeView: 'Login'
+      activeView: 'InterviewPage'
     };
     this.updateVideos = this.updateVideos.bind(this);
     this.setPage = this.setPage.bind(this);

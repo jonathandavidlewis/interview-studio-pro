@@ -1,5 +1,5 @@
-const Sequelize = require('sequalize');
-const credentials = require('./server.config.js')
+const Sequelize = require('sequelize');
+const credentials = require('./server-config.js');
 
 const sequelize = new Sequelize('verbalization', credentials.username, credentials.password, {
   host: 'localhost',
@@ -12,5 +12,15 @@ const sequelize = new Sequelize('verbalization', credentials.username, credentia
   }
 
 });
+
+
+sequelize.authenticate()
+.then(() => {
+  console.log('Connection has been established successfully.');
+})
+.catch(err => {
+  console.error('Unable to connect to the database:', err);
+});
+
 
 module.exports = sequelize;

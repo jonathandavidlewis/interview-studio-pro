@@ -4,6 +4,7 @@
   "description": "Improve your interviewing skills through practice and review.",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "test",
     "babel-transpile": "babel public/client/src --out-dir public/client/dist --presets=es2015,react --ignore=node_modules,compiled --source-maps inline"
   },
@@ -18,10 +19,18 @@
   },
   "homepage": "https://github.com/jonathandavidlewis/interview-studio-pro#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.15.5",
+    "morgan": "^1.8.2",
     "multer": "^1.3.0",
+    "mysql2": "^1.4.2",
     "passport-github": "^1.1.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "sequelize": "^4.11.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
