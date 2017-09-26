@@ -10,3 +10,4 @@ node_modules
 /public/client/src/design/
 /public/client/dist/
 /npm-debug.log
+/AWS-Jonathan.pem
