@@ -11,4 +11,9 @@ var User = sequelize.define('User', {
   createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.NOW }
 });
 
+User.sync().then(() => {
+  console.log('User table sync complete')
+});
+
+
 module.exports = User;

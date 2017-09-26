@@ -33,4 +33,8 @@ var Response = sequelize.define('Response', {
   }
 });
 
+Response.sync().then(() => {
+  console.log('Response table sync complete')
+});
+
 module.exports = Response;

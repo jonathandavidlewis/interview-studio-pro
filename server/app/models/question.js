@@ -11,4 +11,8 @@ var Question = sequelize.define('Question', {
   createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.NOW }
 });
 
+Question.sync().then(() => {
+  console.log('Question table sync complete')
+});
+
 module.exports = Question;
