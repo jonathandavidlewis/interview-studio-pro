@@ -1,4 +1,5 @@
-const sequelize = require('../db/index.js');
+const Sequelize = require('sequelize');
+const sequelize = require('../../db/index.js');
 
 var Question = sequelize.define('Question', {
 
