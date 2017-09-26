@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../db/index.js');
 
-var Question = sequelize.define('Question', {
+const Question = sequelize.define('Question', {
 
   id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   title: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },

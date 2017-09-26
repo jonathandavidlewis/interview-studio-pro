@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../db/index.js');
 
+console.log('sequelize models ' + sequelize);
+
 var Response = sequelize.define('Response', {
 
   id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
