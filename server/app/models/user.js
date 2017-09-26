@@ -12,7 +12,7 @@ var User = sequelize.define('User', {
 });
 
 User.sync().then(() => {
-  console.log('User table sync completed')
+  console.log('User table sync complete')
 });
 
 
