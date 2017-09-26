@@ -2,9 +2,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      video: null
+      question: null,
+      activeView: 'Login'
     };
     this.updateVideos = this.updateVideos.bind(this);
+    this.setPage = this.setPage.bind(this);
   }
   selectVideo(video) {
     this.setState({
@@ -21,21 +23,36 @@ class App extends React.Component {
     this.setState();
   }
   searchVideos(searchRequest) {
-    this.props.searchVideos(options, this.updateVideos);
+    //this.props.searchVideos(options, this.updateVideos);
   }
 
   componentDidMount() {
     this.searchVideos('puppies');
   }
+  renderActiveView() {
+    if (this.state.activeView === 'InterviewPage') {
+      return (<InterviewPage />);
+    } else if (this.state.activeView === 'Login') {
+      return (<Login/>);
+    } else if (this.state.activeView === 'Signup') {
+        return (<Signup />);
+      }
+  }
+  setPage(mainView) {
+    this.setState({activeView: mainView});
+  }
   render() {
+
     return (
       <div>
-        <Navbar />
-        <Main />
+        <Navbar setMainPage={this.setPage}/>
+        <Sidenav />
+        {this.renderActiveView()}
       </div>
     );
   }
 }
+//
 
 
 

@@ -1,27 +1,18 @@
 var Navbar = (props) => (
-  <div clasName="container">
-    <nav id="mainNav" clasName="navbar navbar-default navbar-fixed-top navbar-custom visible-lg-inline-block">
-      <div clasName="container">
-        <div clasName="navbar-header page-scroll">
-          <button type="button" clasName="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span clasName="sr-only">Toggle navigation</span> Menu <i clasName="fa fa-bars"></i>
-          </button>
-          <a clasName="navbar-brand" href="#page-top">Interview Studio Pro</a>
-        </div>
-        <div clasName="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul clasName="nav navbar-nav navbar-right">
-            <li clasName="">
-              <a href="/">Home</a>
-            </li>
-            <li clasName="">
-              <a href="/signup">Signup</a>
-            </li>
-            <li clasName="">
-              <a href="/login">Login</a>
-            </li>
-          </ul>
-        </div>
+  <nav className="navbar navbar-inverse">
+    <div className="container-fluid">
+      <div className="navbar-header">
+        <a className="navbar-brand" href="#">Interview Studio Pro</a>
       </div>
-    </nav>
-  </div>
+      <ul className="nav navbar-nav">
+        <li className="active"><a href="#">Home</a></li>
+        <li><a href="#" onClick={() => props.setMainPage('InterviewPage') }>Interview Practice</a></li>
+        <li><a href="#">Your Responses</a></li>
+      </ul>
+      <ul className="nav navbar-nav navbar-right">
+        <li><a href="#" onClick={() => props.setMainPage('Signup')}><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" onClick={() => props.setMainPage('Login')}><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
 );

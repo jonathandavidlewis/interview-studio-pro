@@ -28,7 +28,7 @@ $(document).ready(function() {
           }, 0);
         } else {
           interim_transcript += event.results[i][0].transcript;
-          interim_span.textContent = interim_transcript;
+          $('.interim-result').text(interim_transcript);
 
         }
       }
@@ -47,8 +47,7 @@ $(document).ready(function() {
 
   speechApp.startButton = function(event) {
     $('.interim-result').text('');
-    $('.final-result').text('');
-    final_span.text = '';
+    $('.final-result').text(final_transcript);
     final_transcript = '';
     speech.lang = 'en-US';
     speech.start();
@@ -62,7 +61,7 @@ $(document).ready(function() {
 
   };
 
-  var interim_span = document.getElementsByClassName('interim-result')[0];
-  var final_span = document.getElementsByClassName('final-result')[0];
+  speechApp.interim_span = document.getElementsByClassName('interim-result')[0];
+  speechApp.final_span = document.getElementsByClassName('final-result')[0];
 
 });
