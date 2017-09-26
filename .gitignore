@@ -4,3 +4,7 @@ node_modules
 *.idea
 *.editorconfig
 *.xml
+*config.js
+*.md
+/public/client/src/components/Search.jsx
+/public/client/src/design/

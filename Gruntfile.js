@@ -61,13 +61,28 @@ module.exports = function(grunt) {
           'public/lib/**/*.js',
         ],
         tasks: [
-          'concat',
-          'uglify'
+          'babel'
         ]
       },
       css: {
         files: 'public/*.css',
         tasks: ['cssmin']
+      }
+    },
+
+    babel: {
+      options: {
+        plugins: ['transform-react-jsx'],
+        presets: ['es2015', 'react']
+      },
+      jsx: {
+        files: [{
+          expand: true,
+          cwd: 'public/client/src/', // Custom folder
+          src: ['*.jsx'],
+          dest: 'public/client/dist/', // Custom folder should be recompiled after
+          ext: '.js'
+        }]
       }
     },
 
@@ -95,7 +110,8 @@ module.exports = function(grunt) {
   // Main grunt tasks
   ////////////////////////////////////////////////////
 
-  grunt.registerTask("default", ["eslint"]);
+  //grunt.registerTask("default", ["eslint"]);
+  grunt.registerTask('default', ['babel']);
 
   grunt.registerTask('test', [
     'mochaTest'

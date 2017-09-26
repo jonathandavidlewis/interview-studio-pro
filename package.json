@@ -4,7 +4,8 @@
   "description": "Improve your interviewing skills through practice and review.",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "babel-transpile": "babel public/client/src --out-dir public/client/dist --presets=es2015,react --ignore=node_modules,compiled --source-maps inline"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/jonathandavidlewis/interview-studio-pro/issues"
   },
-  "homepage": "https://github.com/jonathandavidlewis/interview-studio-pro#readme"
+  "homepage": "https://github.com/jonathandavidlewis/interview-studio-pro#readme",
+  "dependencies": {
+    "multer": "^1.3.0",
+    "passport-github": "^1.1.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0"
+  }
 }

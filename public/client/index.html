@@ -8,89 +8,130 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-    <link rel="manifest" href="./favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="src/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="src/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="src/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="src/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="src/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="src/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="src/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="src/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="src/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="src/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicons/favicon-16x16.png">
+    <link rel="manifest" href="src/favicons/manifest.json">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/main.css">
   </head>
   <body>
+
+  <!-- Top Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Interview Studio Pro</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Interview Practice</a></li>
+        <li><a href="#">Your Responses</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- END TOP NAVBAR -->
+
+  <!-- Side Nav -->
+  <div class="sidenav">
+    <span class="open-side-nav">&#9776;</span>
+    <a href="#">Home</a>
+    <a href="#">Your Responses</a>
+    <a href="#">Search Responses</a>
+    <a href="#">Give Feedback</a>
+  </div>
+  <!-- End Side Nav -->
+
+
+
+
   <div class="container">
-    <div class="container">
-      <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
-      <!-- Navigation -->
-      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="#page-top">Interview Studio Pro</a>
-          </div>
+    <div class="container page-title">
+      <h1 class="page-heading text-center">Interview practice</h1>
+    </div>
+    <div class="row">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="hidden">
-                <a href="#page-top"></a>
-              </li>
-              <li class="page-scroll">
-                <a href="#portfolio">Home</a>
-              </li>
-              <li class="page-scroll">
-                <a href="#about">Signup</a>
-              </li>
-              <li class="page-scroll">
-                <a href="#contact">Login</a>
-              </li>
-            </ul>
-          </div>
-          <!-- /.navbar-collapse -->
+      <!-- Sidebar left container -->
+      <div class="col-lg-2">
+
+        <!-- Sidebar left -->
+        <!--<div class="sidebar-left container-fluid">
+          <h4 class="sidebar-title">Your Links</h4>
+          <ul class="sidebar-list list-unstyled">
+            <li class="sidebar-list-item"><a href="#">Your plan</a></li>
+            <li class="sidebar-list-item"><a href="#">Your videos</a></li>
+            <li class="sidebar-list-item"><a href="#">search users</a></li>
+            <li class="sidebar-list-item"><a href="#">search videos</a></li>
+            <li class="sidebar-list-item"><a href="#">Your videos</a></li>
+          </ul>
+        </div>-->
+      </div>
+
+      <div class="col-lg-8">
+
+        <div class="question-header-container"><span class="question-header"><h2 class="question-header-text text-center">Question</h2></span></div>
+        <hr>
+        <div class="question-prompt-container"><span class="question-prompt"><h3 class="question-prompt-text text-center">What did you learn yesterday/this week?</h3></span></div>
+        <div class="jumbotron main-video-container">
+          <canvas id="user-video" class="interviewer-video"  width="320" height="240"></canvas>
         </div>
-        <!-- /.container-fluid -->
-      </nav>
-
-      <!-- Header -->
-      <header>
-        <div class="container" id="maincontent" tabindex="-1">
+        <div class="time-target-notification-container"><span class="time-target-notification"></span></div>
+        <div class="record-controls-container">
           <div class="row">
-            <div class="col-lg-12 img-responsive">
-              <img class="img-responsive img-circle" src="img/profile_sm.jpg" alt="">
-              <div class="intro-text">
-                <h1 class="name">Jonathan David Lewis</h1>
-                <hr class="star-light">
-                <span class="skills">Web Developer - Devops Engineer</span>
-              </div>
+            <div class="col-lg-12 btn-record record btn btn-success">
+              <span class="record-button-text record">Start recording</span>
             </div>
           </div>
         </div>
-      </header>
-      <div class="container main jumbotron">
-        <p>Try practicing interviewing</p>
+        <div class="row next-question-container">
+          <br>
+          <div class="col-lg-6"></div>
+          <div class=" col-lg-6 btn btn-default next-question">
+            <span class="next-question-label">Next question</span>
+          </div>
+          <div class="interim-response-text container-fluid">
+            <span class="interim-result"></span>
+          </div>
+          <div class="final-response-text container-fluid">
+            <span class="final-result"></span>
+          </div>
+        </div>
+
       </div>
-      <div class="footer"></div>
+      <div class="col-lg-2"></div>
     </div>
   </div>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
+
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
+  <script src="src/js/voice-recognition.js"></script>
+  <script src="src/js/main.js"></script>
   </body>
 </html>
