@@ -4,7 +4,7 @@
   "description": "Improve your interviewing skills through practice and review.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon app.js 80",
     "test": "test",
     "babel-transpile": "babel public/client/src --out-dir public/client/dist --presets=es2015,react --ignore=node_modules,compiled --source-maps inline"
   },
