@@ -10,15 +10,15 @@ const handler = require('./handler.js');
 
 // Route requests
 
-router.get('/responses', handler.responses.get);
+router.get('/api/responses', handler.responses.get);
 
-router.post('/responses', handler.responses.post);
+router.post('/api/responses', handler.responses.post);
 
-router.post('/signup', handler.users.post);
+router.post('/api/signup', handler.users.post);
 
-router.post('/login', handler.users.post);
+router.post('/api/login', handler.users.post);
 
-router.get('/questions', handler.users.get);
+router.get('/api/questions', handler.users.get);
 
 
 /*

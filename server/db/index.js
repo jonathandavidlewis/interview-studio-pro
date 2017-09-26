@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize');
 const credentials = require('./server-config.js');
+let host = credentials.ip || 'localhost';
 
 const sequelize = new Sequelize('verbalization', credentials.username, credentials.password, {
-  host: 'localhost',
+  host: host,
   dialect: 'mysql',
 
   pool: {

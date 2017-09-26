@@ -27,7 +27,7 @@ class InterviewPage extends React.Component {
         this.loadQuestion(data);
       },
       error: function (data) {
-        console.error('chatterbox: Failed to receive message', data);
+        console.error('Failed to receive message', data);
       }
     });
   }
