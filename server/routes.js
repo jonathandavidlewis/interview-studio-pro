@@ -1,6 +1,10 @@
 const app = require('./server.js');
 var router = require('express').Router();
 const User = require('./app/models/user.js');
+const Question = require('./app/models/question.js');
+const Response = require('./app/models/response.js');
+
+
 const handler = require('./handler.js');
 
 
