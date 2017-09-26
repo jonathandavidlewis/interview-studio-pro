@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../db/index.js');
+const Question = require('./question.js');
+const User = require('./user.js');
 
 console.log('sequelize models ' + sequelize);
 
