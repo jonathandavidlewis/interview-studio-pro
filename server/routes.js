@@ -10,6 +10,10 @@ const handler = require('./handler.js');
 
 // Route requests
 
+router.get('/', function(req, res) {
+  res.end('You got to ROOT')
+});
+
 router.get('/api/responses', handler.responses.get);
 
 router.post('/api/responses', handler.responses.post);
