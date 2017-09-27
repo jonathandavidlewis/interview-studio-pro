@@ -31,6 +31,7 @@ $(document).ready(function() {
         if (event.results[i].isFinal) {
           final_transcript += event.results[i][0].transcript;
           setTimeout(function() {
+            interim_transcript = '';
 
           }, 0);
         } else {
@@ -54,7 +55,7 @@ $(document).ready(function() {
 
   speechApp.startButton = function(event) {
     $('.interim-result').text('');
-    $('.final-result').text(final_transcript);
+    $('.final-result').text('');
     final_transcript = '';
     speech.lang = 'en-US';
     speech.start();

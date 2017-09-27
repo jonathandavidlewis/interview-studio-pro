@@ -16,6 +16,8 @@ class InterviewPage extends React.Component {
     });
     console.log('Question is a: ' + typeof question);
     console.log(this.state.question);
+    $('.interim-result').text('');
+    $('.final-result').text('');
   }
 
 
@@ -56,13 +58,9 @@ class InterviewPage extends React.Component {
 
   }
 
-  componentWillReceiveProps() {
-    console.log('component will receive props');
-    this.loadVideo();
-  }
 
   componentDidUpdate() {
-    this.loadVideo();
+    /*this.loadVideo();*/
     console.log('component did update')
   }
 
