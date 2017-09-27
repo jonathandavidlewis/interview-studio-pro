@@ -18,6 +18,20 @@ class InterviewPage extends React.Component {
     console.log(this.state.question);
   }
 
+  loadVideo() {
+    video = document.getElementById("live");
+
+    navigator.mediaDevices.getUserMedia({
+      audio: true,
+      video: { width: 640, height: 480 }
+    }).then(function(stream) {
+      /* use the stream */
+      video.srcObject = stream
+    }).catch(function(err) {
+      /* handle the error */
+    });
+  }
+
   fetchQuestion(event, callback) {
     $.ajax({
       url: '/api/questions',
@@ -37,7 +51,8 @@ class InterviewPage extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchQuestion('javascript', this.loadQuestion)
+    this.fetchQuestion('javascript', this.loadQuestion);
+    this.loadVideo();
   }
   render() {
     return (
