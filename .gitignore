@@ -14,3 +14,4 @@ node_modules
 /environment-variables.js
 /server.csr
 /myserver.key
+/domain.crt
