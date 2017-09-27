@@ -9,24 +9,24 @@ var Signup = (props) => (
         <div className="control-group">
           {/*<!-- Username -->*/}
           <label for="username" className="sr-only">Username</label>
-          <input type="email" id="inputEmail" className="form-control" name="username" placeholder="Username" required="" autofocus="" />
+          <input type="email" id="inputEmail" className="form-control" name="username" placeholder="Username" required="" />
         </div>
 
         <div className="control-group">
           {/*<!-- E-mail -->*/}
-          <label for="inputEmail" className="sr-only">Email address</label>
-          <input type="email" id="inputEmail" className="form-control" name="email" placeholder="Email address" required="" autofocus="" />
+          <label className="sr-only">Email address</label>
+          <input type="email" id="inputEmail" className="form-control" name="email" placeholder="Email address" required="" />
         </div>
 
         <div className="control-group">
           {/*<!-- Password-->*/}
-          <label for="password" className="sr-only">Password</label>
+          <label className="sr-only">Password</label>
           <input type="password" id="inputPassword" className="form-control" name="password" placeholder="Password" required="" />
         </div>
 
         <div className="control-group">
           {/*<!-- Password -->*/}
-          <label for="password_confirm" className="sr-only">Password</label>
+          <label className="sr-only">Password</label>
           <input type="password" id="inputPassword" className="form-control" name="password" placeholder="Confirm your password" required="" />
         </div>
 

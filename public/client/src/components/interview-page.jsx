@@ -50,11 +50,13 @@ class InterviewPage extends React.Component {
 
   componentDidMount() {
     this.fetchQuestion('javascript', this.loadQuestion);
+    console.log('component did mount')
 
   }
 
   componentDidUpdate() {
     this.loadVideo();
+    console.log('component did update')
   }
 
   render() {
