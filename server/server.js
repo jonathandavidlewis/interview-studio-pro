@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Middleware
-var morgan = require('morgan');
+const morgan = require('morgan');
 app.use(cookieParser('This is a private cookie'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
