@@ -23,7 +23,11 @@ app.use(express.static(__dirname + '/public/client'));
 console.log('public directory is: ' + __dirname + '/public/client');
 httpsServer.listen(443);
 
+
 if (!module.parent) {
   app.listen(app.get('port'));
   console.log('Interview Studio is listening on', app.get('port'));
 }
+
+
+//

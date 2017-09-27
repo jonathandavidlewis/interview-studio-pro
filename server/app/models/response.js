@@ -11,7 +11,8 @@ var Response = sequelize.define('Response', {
   responseText: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
   keywords: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
   stars: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 },
-  videoUrl: { type: Sequelize.INTEGER, allowNull: false },
+  videoUrl: { type: Sequelize.STRING, allowNull: true },
+  duration: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 30 },
   createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
 
   question_id: {

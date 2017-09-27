@@ -2,7 +2,7 @@ class InterviewPage extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      question: '',
+      question: {},
       response_text: '',
       keywords: 'javascript'
     };
@@ -12,28 +12,32 @@ class InterviewPage extends React.Component {
 
   loadQuestion(question) {
     this.setState({
-      question: question
+      question: JSON.parse(question)
     });
+    console.log('Question is a: ' + typeof question);
+    console.log(this.state.question);
   }
 
-  fetchQuestion(event) {
+  fetchQuestion(event, callback) {
     $.ajax({
       url: '/api/questions',
       type: 'GET',
-      data: {userToken: '', keywords: this.state.keywords, maxResults: 1, sort: 'random'},
+      //data: {userToken: '', keywords: this.state.keywords, maxResults: 1, sort: 'random'},
       dataType: 'application/json',
       success: function (data) {
-        console.log('get data', data);
+        console.log('QUESTION FETCHED', data);
         this.loadQuestion(data);
       },
       error: function (data) {
-        console.error('Failed to receive message', data);
+        console.error('Failed to receive message' );
+        console.log(data.responseText);
+        callback(data.responseText);
       }
     });
   }
 
   componentDidMount() {
-    //this.fetchQuestion('javascript');
+    this.fetchQuestion('javascript', this.loadQuestion)
   }
   render() {
     return (
@@ -48,11 +52,11 @@ class InterviewPage extends React.Component {
 
           <div className="col-lg-8">
 
-            <div className="question-header-container"><span className="question-header"><h2 className="question-header-text text-center">Question</h2></span></div>
-            <hr />
-              <div className="question-prompt-container"><span className="question-prompt"><h3 className="question-prompt-text text-center">What did you learn yesterday/this week?</h3></span></div>
-              <div className="jumbotron main-video-container">
-                <canvas id="user-video" className="interviewer-video"  width="320" height="240"></canvas>
+
+              <div className="question-prompt-container"><span className="question-prompt"><h3 className="question-prompt-text text-center">{this.state.question.questionText}</h3></span></div>
+              <div className="main-video-container">
+                <video id="live" autoPlay></video>
+
               </div>
               <div className="time-target-notification-container"><span className="time-target-notification"></span></div>
               <div className="record-controls-container">
@@ -65,7 +69,7 @@ class InterviewPage extends React.Component {
               <div className="row next-question-container">
                 <br />
                   <div className="col-lg-6"></div>
-                  <div className=" col-lg-6 btn btn-default next-question" >
+                  <div className=" col-lg-6 btn btn-default next-question" onClick={this.fetchQuestion.bind(this, '', this.loadQuestion)}>
                     <span className="next-question-label">Next question</span>
                   </div>
                   <div className="interim-response-text container-fluid">
@@ -84,4 +88,5 @@ class InterviewPage extends React.Component {
 }
 
 
-//onClick={/*this.fetchQuestion*/}
+
+//<canvas id="user-video" className="interviewer-video"  width="320" height="240"></canvas>

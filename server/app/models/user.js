@@ -6,8 +6,8 @@ var User = sequelize.define('User', {
 
   id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   username: { type: Sequelize.STRING },
-  password: { type: Sequelize.STRING, allowNull: true, defaultValue: '' },
-  email: { type: Sequelize.STRING, allowNull: true, defaultValue: '' },
+  password: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
+  email: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
   createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.NOW }
 });
 

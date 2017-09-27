@@ -87,3 +87,16 @@ body {
 .form-top-space {
   margin-top: 100px;
 }
+
+video {
+  border-radius: 50px;
+  box-shadow: 6px 6px 6px lightslategray;
+  margin: 0 auto;
+}
+
+.main-video-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
