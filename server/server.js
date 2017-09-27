@@ -9,6 +9,8 @@ const app = express();
 
 // Middleware
 const morgan = require('morgan');
+app.use(morgan('dev'));
+
 app.use(cookieParser('This is a private cookie'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
