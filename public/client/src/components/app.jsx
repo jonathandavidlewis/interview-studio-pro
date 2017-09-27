@@ -36,7 +36,9 @@ class App extends React.Component {
       return (<Login/>);
     } else if (this.state.activeView === 'Signup') {
         return (<Signup />);
-      }
+    } else if (this.state.activeView === 'ResponsesPage') {
+      return (<ResponsesPage />);
+    }
   }
   setPage(mainView) {
     this.setState({activeView: mainView});
@@ -45,8 +47,8 @@ class App extends React.Component {
 
     return (
       <div>
-        <Navbar setMainPage={this.setPage}/>
-        <Sidenav />
+        <Navbar setMainPage={this.setPage} />
+        <Sidenav setMainPage={this.setPage} />
         {this.renderActiveView()}
       </div>
     );

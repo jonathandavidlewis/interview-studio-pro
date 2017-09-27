@@ -7,7 +7,7 @@ var Navbar = (props) => (
       <ul className="nav navbar-nav">
         <li className="active"><a href="#">Home</a></li>
         <li><a href="#" onClick={() => props.setMainPage('InterviewPage') }>Interview Practice</a></li>
-        <li><a href="#">Your Responses</a></li>
+        <li><a href="#" onClick={() => props.setMainPage('ResponsesPage') }>My Responses</a></li>
       </ul>
       <ul className="nav navbar-nav navbar-right">
         <li><a href="#" onClick={() => props.setMainPage('Signup')}><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>

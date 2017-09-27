@@ -90,7 +90,7 @@ body {
 
 video {
   border-radius: 50px;
-  box-shadow: 6px 6px 6px lightslategray;
+  box-shadow: 0 0 30px #333333;
   margin: 0 auto;
 }
 
@@ -100,3 +100,12 @@ video {
   padding-bottom: 10px;
 }
 
+.question-prompt-container {
+  background-color: #eeeeee;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px #777777;
+  padding: 1px;
+  padding-bottom: 5px;
+  padding-top: 1px;
+  margin-bottom: 5px;
+}
