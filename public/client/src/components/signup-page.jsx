@@ -8,7 +8,7 @@ var Signup = (props) => (
         </div>
         <div className="control-group">
           {/*<!-- Username -->*/}
-          <label for="username" className="sr-only">Username</label>
+          <label className="sr-only">Username</label>
           <input type="email" id="inputEmail" className="form-control" name="username" placeholder="Username" required="" />
         </div>
 

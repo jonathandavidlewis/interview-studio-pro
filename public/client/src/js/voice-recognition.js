@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  //todo: impliment MediaRecorder
   window.speechApp = {};
 
   navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {

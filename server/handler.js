@@ -13,20 +13,46 @@ module.exports = function() {
 
   console.log('routes loaded');
 
-  app.get('/api/responses', function(req, response) {
+  app.get('/api/responses', function(req, res) {
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+
+    Response.findAll().then(function(responses) {
+      res.status(200).send(questions);
+      console.log('Got to responses endpoint', questions);
+    });
 
   });
 
-  app.post('/api/responses', function(req, response) {
+  app.get('/', function(req, res) {
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+
+    res.status(302).redirect('/login');
 
   });
 
-  app.post('/api/signup', function(req, response) {
 
+  app.post('/api/responses', function(req, res) {
+    Response.sync().then(() => {
+      return Response.create({
+        videoUrl: req.body.videoUrl,
+        responseText: req.body.questionText,
+        keywordMatch: req.body.keywordMatch,
+        duration: req.body.duration
+      });
+    }).then(function(response) {
+      console.log('Response received' + JSON.stringify(response));
+      res.status(201).send(response);
+    });
   });
 
-  app.post('/api/login', function(req, response) {
+  app.post('/signup', function(req, res) {
+    res.status(302).redirect('/home');
+  });
 
+  app.post('/login', function(req, res) {
+    res.status(302).redirect('/home');
   });
 
   app.post('/api/questions', function(req, res) {
@@ -41,9 +67,6 @@ module.exports = function() {
       console.log('Question entry input' + JSON.stringify(question));
       res.status(201).send(question);
     });
-
-
-
   });
 
   var queryOffset = 0;
@@ -75,7 +98,14 @@ id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   keywords: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
   createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.NOW }
 
-
+Response:
+  id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+  responseText: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
+  keywordMatch: { type: Sequelize.STRING, allowNull: false },
+  stars: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 },
+  videoUrl: { type: Sequelize.STRING, allowNull: true },
+  duration: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 30 },
+  createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
 
 
 

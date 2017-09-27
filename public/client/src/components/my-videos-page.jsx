@@ -4,26 +4,26 @@ class MyVideosPage extends React.Component {
     this.state= {
       videos: null
     };
-    this.updateVideos = this.updateVideos.bind(this);
+    //this.updateVideos = this.updateVideos.bind(this);
   }
   componentDidMount() {
-    this.getVideos('queryString');
+
   }
   render() {
     return (
-      <div>
-        <nav className="navbar">
-          <div className="col-md-6 offset-md-3">
-            <Search searchYouTube={this.searchYouTube.bind(this)} />
-          </div>
-        </nav>
+      <div className="container">
+        <div className="container page-title">
+          <h1 className="page-heading text-center">My Videos</h1>
+        </div>
         <div className="row">
-          <div className="col-md-7">
-            <VideoPlayer video={this.state.video}/>
+
+          <div className="col-lg-2">
           </div>
-          <div className="col-md-5">
-            <VideoList selectVideo={this.selectVideo} videos={this.state.videos}/>
+
+          <div className="col-lg-8">
+
           </div>
+          <div className="col-lg-2"></div>
         </div>
       </div>
     );

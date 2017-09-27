@@ -53,7 +53,7 @@ class InterviewPage extends React.Component {
 
   componentDidMount() {
     this.fetchQuestion('javascript', this.loadQuestion);
-    console.log('component did mount')
+    console.log('component did mount');
     this.loadVideo();
 
   }

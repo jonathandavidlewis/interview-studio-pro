@@ -9,7 +9,7 @@ var Response = sequelize.define('Response', {
 
   id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   responseText: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
-  keywords: { type: Sequelize.STRING, allowNull: false, defaultValue: '' },
+  keywordMatch: { type: Sequelize.STRING, allowNull: false },
   stars: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0 },
   videoUrl: { type: Sequelize.STRING, allowNull: true },
   duration: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 30 },
