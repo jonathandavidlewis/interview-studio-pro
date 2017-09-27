@@ -12,3 +12,5 @@ node_modules
 /npm-debug.log
 /AWS-Jonathan.pem
 /environment-variables.js
+/server.csr
+/myserver.key

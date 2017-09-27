@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   window.speechApp = {};
-
+  getUserMedia();
   if (!('webkitSpeechRecognition' in window)) {
 
   } else {
@@ -36,7 +36,7 @@ $(document).ready(function() {
     };
   }
   speech.onerror = function(event) {
-    console.log('Speech speech Had an error');
+    console.log('Speech speech Had an error', JSON.stringify(event), event.error, event.error.message);
   };
   speech.onend = function() {
     console.log('Speech speech service disconnected');

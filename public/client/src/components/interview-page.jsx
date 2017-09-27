@@ -33,7 +33,7 @@ class InterviewPage extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchQuestion('javascript');
+    //this.fetchQuestion('javascript');
   }
   render() {
     return (
@@ -65,7 +65,7 @@ class InterviewPage extends React.Component {
               <div className="row next-question-container">
                 <br />
                   <div className="col-lg-6"></div>
-                  <div className=" col-lg-6 btn btn-default next-question" onClick={this.fetchQuestion}>
+                  <div className=" col-lg-6 btn btn-default next-question" >
                     <span className="next-question-label">Next question</span>
                   </div>
                   <div className="interim-response-text container-fluid">
@@ -84,3 +84,4 @@ class InterviewPage extends React.Component {
 }
 
 
+//onClick={/*this.fetchQuestion*/}

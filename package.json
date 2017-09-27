@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon app.js 80",
     "test": "test",
-    "babel-transpile": "babel public/client/src --out-dir public/client/dist --presets=es2015,react --ignore=node_modules,compiled --source-maps inline"
+    "babel-transpile": "babel public/client/src --out-dir public/client/dist --presets=es2015,react --ignore=node_modules,compiled --source-maps inline --watch",
+    "dev": "babel public/client/src --out-dir public/client/dist --presets=es2015,react --ignore=node_modules,compiled --source-maps inline --watch & nodemon app.js 80"
   },
   "repository": {
     "type": "git",
