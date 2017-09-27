@@ -19,14 +19,12 @@ class InterviewPage extends React.Component {
   }
 
   loadVideo() {
-    video = document.getElementById("live");
-
     navigator.mediaDevices.getUserMedia({
       audio: true,
       video: { width: 640, height: 480 }
     }).then(function(stream) {
       /* use the stream */
-      video.srcObject = stream
+      document.getElementById("live").srcObject = stream
     }).catch(function(err) {
       /* handle the error */
     });
@@ -52,8 +50,13 @@ class InterviewPage extends React.Component {
 
   componentDidMount() {
     this.fetchQuestion('javascript', this.loadQuestion);
+
+  }
+
+  componentDidUpdate() {
     this.loadVideo();
   }
+
   render() {
     return (
       <div className="container">
