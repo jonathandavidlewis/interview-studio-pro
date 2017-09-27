@@ -1,7 +1,14 @@
 $(document).ready(function() {
 
   window.speechApp = {};
-  getUserMedia();
+
+  navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
+    /* use the stream */
+  }).catch(function(err) {
+    /* handle the error */
+  });
+
+
   if (!('webkitSpeechRecognition' in window)) {
 
   } else {
