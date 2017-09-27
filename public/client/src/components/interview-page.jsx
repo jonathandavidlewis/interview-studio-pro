@@ -18,6 +18,7 @@ class InterviewPage extends React.Component {
     console.log(this.state.question);
   }
 
+
   loadVideo() {
     navigator.mediaDevices.getUserMedia({
       audio: true,
@@ -51,7 +52,13 @@ class InterviewPage extends React.Component {
   componentDidMount() {
     this.fetchQuestion('javascript', this.loadQuestion);
     console.log('component did mount')
+    this.loadVideo();
 
+  }
+
+  componentWillReceiveProps() {
+    console.log('component will receive props');
+    this.loadVideo();
   }
 
   componentDidUpdate() {
