@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 archive
 node_modules
 .DS_Store
@@ -19,3 +20,14 @@ node_modules
 
 /interview-questions.js
 /interview-questions.json
+=======
+node_modules/
+bower_components/
+*.log
+
+build/
+dist/
+
+creds.txt
+.idea
+>>>>>>> e7ab7d928653120d04e2fcdd2b6273e1e905ad7b
