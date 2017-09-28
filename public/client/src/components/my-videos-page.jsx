@@ -4,8 +4,13 @@ class MyVideosPage extends React.Component {
     this.state= {
       videos: null
     };
-    //this.updateVideos = this.updateVideos.bind(this);
+    this.loadUserResponses = this.loadUserResponses.bind(this);
   }
+
+  loadUserResponses() {
+
+  }
+
   componentDidMount() {
 
   }
@@ -13,7 +18,7 @@ class MyVideosPage extends React.Component {
     return (
       <div className="container">
         <div className="container page-title">
-          <h1 className="page-heading text-center">My Videos</h1>
+          <h1 className="page-heading text-center">My Responses</h1>
         </div>
         <div className="row">
 
@@ -21,8 +26,16 @@ class MyVideosPage extends React.Component {
           </div>
 
           <div className="col-lg-8">
+            <div className="row responses-headings">
+              <span className="response-thumbnail"><img src="" alt="" className="response-thumbnail-image"/></span>
+              <span className="response-question"></span>
+              <span className="response-keyword-match"></span>
+              <span className="question-keywords"></span>
+            </div>
+            <div className="row response-entry"></div>
 
           </div>
+
           <div className="col-lg-2"></div>
         </div>
       </div>

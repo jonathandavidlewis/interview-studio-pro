@@ -109,3 +109,31 @@ video {
   padding-top: 1px;
   margin-bottom: 5px;
 }
+
+.response-header {
+  display: inline-block;
+  white-space: nowrap;
+
+}
+
+.response-table {
+  background-color: #eeeeee;
+  border-radius: 20px;
+  box-shadow: 0 0 8px #111111;
+}
+
+.response-item.response-thumbnail img{
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 6px #818181;
+  margin-bottom: 15px;
+}
+
+.response-entry {
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.response-entry:hover {
+  background-color: #dddddd;
+}
