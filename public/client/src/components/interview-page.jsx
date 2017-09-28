@@ -23,7 +23,7 @@ class InterviewPage extends React.Component {
 
   loadVideo() {
     navigator.mediaDevices.getUserMedia({
-      audio: true,
+      audio: false,
       video: { width: 640, height: 480 }
     }).then(function(stream) {
       /* use the stream */
